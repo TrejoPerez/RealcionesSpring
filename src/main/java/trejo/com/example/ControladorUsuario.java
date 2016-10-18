@@ -54,4 +54,13 @@ public class ControladorUsuario {
         ObjectMapper mapper = new ObjectMapper();
         return u;
     }
+    
+    @RequestMapping(value="findAll/", method=RequestMethod.GET)
+    public ArrayList<Usuario> findAll() throws JsonProcessingException{
+        ArrayList<Usuario> u = (ArrayList<Usuario>) daoUsuario.findAll();
+
+        
+        ObjectMapper mapper = new ObjectMapper();
+        return u;
+    }
 }
