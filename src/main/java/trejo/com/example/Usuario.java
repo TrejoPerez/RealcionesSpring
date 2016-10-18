@@ -42,7 +42,7 @@ public class Usuario implements Serializable{
     
     @OneToOne(cascade={CascadeType.PERSIST, CascadeType.REMOVE}) 
     private Direccion direccion;
-    
+    //mappedBy="usuario"
     @OneToMany(cascade=CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Email> email = new ArrayList<Email>();
             

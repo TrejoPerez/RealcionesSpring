@@ -33,10 +33,8 @@ public class ControladorUsuario {
         Direccion d = new Direccion(calle);
         Usuario u = new Usuario(nombre, d);
         Email e = new Email(email);
-        Email e2 = new Email("TRejo");
-        Email e3 = new Email("Perezz");
         u.addEmail(e);
-       
+        //e.setUsuario(u);
         //daoDireccion.save(d);
         daoUsuario.save(u);
         return "Usuario guardadop";
